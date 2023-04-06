@@ -12,7 +12,7 @@ public class UserRegistrationTest {
 
     @Test
     public void userSuccessfulRegistrationTest (){
-assertTrue(User.userRegistration(new User("Elenta_lina125", "email2@email.com", "elenta", "elenta")));
+assertTrue(User.userRegistration(new User("Elenta_lina1254", "email234@email.com", "elenta", "elenta")));
 
     }
 
