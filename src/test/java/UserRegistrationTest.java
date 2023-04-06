@@ -22,6 +22,15 @@ assertTrue(User.userRegistration(new User("Elenta_lina1254", "email234@email.com
     }
 
     @Test
+    public void userNameOneNumberTest (){
+        assertFalse(User.userRegistration(new User("j", "email1@email.com", "elenta", "elenta")));
+    }
+    @Test
+    public void userNameTooLongTest (){
+        assertFalse(User.userRegistration(new User("ponulis_jonulis".repeat(200), "email45@email.com", "elenta", "elenta")));
+    }
+
+    @Test
     public void userNameAlreadyExistsTest (){
         assertFalse(User.userRegistration(new User("Elenta_lina124", "email@email.com", "elenta", "elenta")));
     }

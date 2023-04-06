@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Suite name>
+    <test name >
+        <clases>
+<class name = "UserRegistrationTest">
+    <methods>
+        <
+    </methods>
+
+</class>
+        </clases>
+    </test>
+
+</Suite>

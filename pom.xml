@@ -27,6 +27,16 @@
             <artifactId>selenium-java</artifactId>
             <version>4.8.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>doctypes</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.myadsget</groupId>
+            <artifactId>test-suite</artifactId>
+            <version>1.0.3</version>
+        </dependency>
     </dependencies>
 
 </project>

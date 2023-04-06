@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7852fe15-51d2-4f6e-8053-bdd668391760" name="Changes" comment="t2">
+    <list default="true" id="7852fe15-51d2-4f6e-8053-bdd668391760" name="Changes" comment="UserLogin tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/AddItemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/runner/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +57,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.UserLoginTest.emailResendFailTest">
-    <configuration name="UserLoginTest.emailResendFailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddItemTest.noAdNameTest">
+    <configuration name="AddItemTest.addItemPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserLoginTest" />
-      <option name="METHOD_NAME" value="emailResendFailTest" />
+      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
+      <option name="METHOD_NAME" value="addItemPositiveTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -69,11 +74,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserLoginTest.emailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddItemTest.addItemTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserLoginTest" />
-      <option name="METHOD_NAME" value="emailTest" />
+      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
+      <option name="METHOD_NAME" value="addItemTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -81,11 +86,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserLoginTest.userLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddItemTest.noAdNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserLoginTest" />
-      <option name="METHOD_NAME" value="userLoginTest" />
+      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
+      <option name="METHOD_NAME" value="noAdNameTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -93,11 +98,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserLoginTest.userSuccessfulLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserLoginTest.wrongUserNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserLoginTest" />
-      <option name="METHOD_NAME" value="userSuccessfulLoginTest" />
+      <option name="METHOD_NAME" value="wrongUserNameTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -105,11 +110,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.userSuccessfulRegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRegistrationTest.userNameTooLongTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="userSuccessfulRegistrationTest" />
+      <option name="METHOD_NAME" value="userNameTooLongTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -119,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserLoginTest.emailResendFailTest" />
-        <item itemvalue="TestNG.UserLoginTest.emailTest" />
-        <item itemvalue="TestNG.UserLoginTest.userSuccessfulLoginTest" />
-        <item itemvalue="TestNG.UserRegistrationTest.userSuccessfulRegistrationTest" />
-        <item itemvalue="TestNG.UserLoginTest.userLoginTest" />
+        <item itemvalue="TestNG.AddItemTest.noAdNameTest" />
+        <item itemvalue="TestNG.AddItemTest.addItemPositiveTest" />
+        <item itemvalue="TestNG.AddItemTest.addItemTest" />
+        <item itemvalue="TestNG.UserLoginTest.wrongUserNameTest" />
+        <item itemvalue="TestNG.UserRegistrationTest.userNameTooLongTest" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +142,7 @@
       <updated>1680693155118</updated>
       <workItem from="1680693156763" duration="7355000" />
       <workItem from="1680718480695" duration="9297000" />
-      <workItem from="1680760854030" duration="15231000" />
+      <workItem from="1680760854030" duration="28589000" />
     </task>
     <task id="LOCAL−00001" summary="t2">
       <created>1680766015770</created>
@@ -145,7 +150,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1680766015770</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="UserLogin tests">
+      <created>1680784180550</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1680784180550</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +164,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="t2" />
-    <option name="LAST_COMMIT_MESSAGE" value="t2" />
+    <MESSAGE value="UserLogin tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserLogin tests" />
   </component>
 </project>

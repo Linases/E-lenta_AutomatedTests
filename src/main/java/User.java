@@ -11,6 +11,10 @@ public class User {
     public String email;
     public String password1;
     public String password2;
+    public String adName;
+    public String adDescription;
+    public String city;
+    public String phoneNr;
     public static WebDriver driver;
 
 
@@ -27,6 +31,15 @@ public class User {
     }
 
     public User(String email) {
+        this.email = email;
+    }
+
+    public User(String adName, String adDescription, String city, String phoneNr, String email) {
+
+        this.adName = adName;
+        this.adDescription = adDescription;
+        this.city = city;
+        this.phoneNr = phoneNr;
         this.email = email;
     }
 
@@ -86,11 +99,13 @@ public class User {
     }
 
     public static boolean loginVerification() {
-
+        boolean result = true;
         List<WebElement> loginFail = driver.findElements(By.xpath("//*[@id=\"form\"]/fieldset/table/tbody/tr[5]/td/div/ul/li"));
-        if (!loginFail.isEmpty())
+        if (!loginFail.isEmpty()) {
             System.out.println("klaida:" + loginFail.get(0).getText());
-        return false;
+            result = false;
+        }
+        return result;
     }
 
     public static boolean userRemindPassword(User userEmail) {
@@ -118,5 +133,59 @@ public class User {
         }
         return result;
     }
+
+    public static boolean addItem(User adItem) {
+
+        driver.get("https://elenta.lt/patalpinti/ivesti-informacija?categoryId=DarbasPaslaugos_IeskoDarbo&returnurl=%2F");
+        driver.findElement(By.id("title")).sendKeys(adItem.adName);
+        driver.findElement(By.id("text")).sendKeys(adItem.adDescription);
+        driver.findElement(By.id("location-search-box")).sendKeys(adItem.city);
+        driver.findElement(By.id("phone")).sendKeys(adItem.phoneNr);
+        driver.findElement(By.id("email")).sendKeys(adItem.email);
+        driver.findElement(By.id("submit-button")).click();
+
+
+        return adItemVerification();
+
+    }
+
+    public static boolean adItemVerification() {
+
+        boolean result = true;
+
+        List<WebElement> adName = driver.findElements(By.id("te"));
+        List<WebElement> adDescription = driver.findElements(By.id("txte"));
+        List<WebElement> phoneNr = driver.findElements(By.id("pe"));
+        List<WebElement> phoneNr2 = driver.findElements(By.id("ce"));
+
+        if (adName.size() > 0) {
+            System.out.println("klaida:" + adName.get(0).getText());
+            result = false;
+        }
+        if (adDescription.size() > 0) {
+            System.out.println("klaida:" + adName.get(0).getText());
+            result = false;
+        }
+        if (phoneNr.size() > 0) {
+            System.out.println("klaida:" + adName.get(0).getText());
+            result = false;
+        }
+        if (phoneNr2.size() > 0) {
+            System.out.println("klaida:" + adName.get(0).getText());
+            result = false;
+        }
+
+//        driver.findElement(By.id("forward-button"));
+//        driver.findElement(By.id("forward-button"));
+        List<WebElement> successs = driver.findElements(By.xpath("//*[@id=\"main-container\"]/h4"));
+        if (successs.size() > 0) {
+
+            System.out.println("sėkmingai sukurtas skelbimas");
+            result = true;
+        }
+        return result;
+    }
+
 }
+
 

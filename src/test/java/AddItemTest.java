@@ -1,3 +1,4 @@
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -7,36 +8,27 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 import java.time.Duration;
+public class AddItemTest {
+@Test
+    public void addItemPositiveTest (){
 
-public class UserLoginTest {
+    assertTrue(User.addItem(new User("Ieškau darbo", "Ieškau testuotojos darbo", "Vilnius", "861799202", "email@gmail.com")));
 
+    }
     @Test
-    public void userSuccessfulLoginWhenEmailVerifiedTest() {
-        assertTrue(User.userLogin(new User("Elenta_geras", "HRKtAi")));
+    public void noAdNameTest (){
+
+        assertFalse(User.addItem(new User("", "Ieškau testuotojos darbo", "Vilnius", "861799202", "email@gmail.com")));
+
     }
 
     @Test
-    public void wrongPasswordTest() {
-        assertFalse(User.userLogin(new User("Elenta_lina1254", "elenta123456")));
-    }
+    public void noAdNameTmest (){
 
-    @Test
-    public void wrongUserNameTest() {
-        assertFalse(User.userLogin(new User("Elenta_geras123", "HRKtAi")));
-    }
+        assertFalse(User.addItem(new User("", "Ieškau testuotojos darbo", "Vilnius", "861799202", "email@gmail.com")));
 
-    @Test
-    public void emailResendTest() {
-        assertTrue(User.userRemindPassword(new User("lina.tauraite@gmail.com")));
     }
-
-    @Test
-    public void emailResendFailTest() {
-        assertFalse(User.userRemindPassword(new User("lina.tauraite@email.com")));
-    }
-
     @BeforeClass
-
     public void beforeClass() {
         User.driver = new ChromeDriver();
         User.driver.manage().window().maximize();
@@ -44,10 +36,8 @@ public class UserLoginTest {
         User.driver.get("https://elenta.lt/prisijungti");
         User.driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
     }
-
     @AfterClass
     public void afterClass() {
 //        driver.quit();
-
     }
 }
