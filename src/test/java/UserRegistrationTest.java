@@ -64,7 +64,7 @@ assertTrue(User.userRegistration(new User("Elenta_lina1254", "email234@email.com
         //  System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver111.exe");
         User.driver = new ChromeDriver();
         User.driver.manage().window().maximize();
-        User.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        User.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         User.driver.get("https://elenta.lt/registracija");
         User.driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
     }

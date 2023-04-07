@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -10,8 +11,9 @@ import java.time.Duration;
 
 public class UserLoginTest {
 
+    @Parameters ({"userName", "password1"})
     @Test
-    public void userSuccessfulLoginWhenEmailVerifiedTest() {
+    public void userSuccessfulLoginWhenEmailVerifiedTest(String userName, String password1 ) {
         assertTrue(User.userLogin(new User("Elenta_geras", "HRKtAi")));
     }
 
@@ -40,7 +42,7 @@ public class UserLoginTest {
     public void beforeClass() {
         User.driver = new ChromeDriver();
         User.driver.manage().window().maximize();
-        User.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        User.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         User.driver.get("https://elenta.lt/prisijungti");
         User.driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
     }

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Suite name>
-    <test name >
-        <clases>
-<class name = "UserRegistrationTest">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1">
+    <test name="test1">
+        <parameter name="userName" value="Elenta_geras"></parameter>
+        <parameter name="password1" value="HRKtAi"></parameter>
+        <parameter name="adName" value="Ieškau darbo"></parameter>
+        <parameter name="adDescription" value="Tiks bet kas"></parameter>
+        <parameter name="city" value="Kaunas"></parameter>
+        <parameter name="phoneNr" value="861799202"></parameter>
+        <parameter name="email" value="email@email.com"></parameter>
+        <classes>
+<class name = "UserLoginTest">
     <methods>
-        <
+        <include name="userSuccessfulLoginWhenEmailVerifiedTest"/>
     </methods>
-
 </class>
-        </clases>
+            <class name="AddItemTest">
+                <methods>
+                    <include name="addItemPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
     </test>
-
-</Suite>
+</suite>

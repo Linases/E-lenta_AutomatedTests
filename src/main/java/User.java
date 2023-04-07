@@ -135,6 +135,22 @@ public class User {
     }
 
     public static boolean addItem(User adItem) {
+        addItemPg1(adItem);
+        if (!adItemVerificationPg1()) {
+            return false;
+        }
+        addItemPg2();
+        if (!adItemVerificationPg2()){
+        return false;
+        }
+        addItemPg3();
+        if (!adItemVerificationPg3()){
+            return false;
+        }
+        return true;
+    }
+
+    public static void addItemPg1(User adItem) {
 
         driver.get("https://elenta.lt/patalpinti/ivesti-informacija?categoryId=DarbasPaslaugos_IeskoDarbo&returnurl=%2F");
         driver.findElement(By.id("title")).sendKeys(adItem.adName);
@@ -143,15 +159,28 @@ public class User {
         driver.findElement(By.id("phone")).sendKeys(adItem.phoneNr);
         driver.findElement(By.id("email")).sendKeys(adItem.email);
         driver.findElement(By.id("submit-button")).click();
+       }
 
-
-        return adItemVerification();
-
+    public static void addItemPg2() {
+        String photoUpload = "C:\\Users\\linat\\IdeaProjects\\E-lenta-automatedTests\\src\\main\\resources\\Photo\\IMG-1735.jpg";
+        driver.findElement(By.id("inputfile")).sendKeys(photoUpload);
+        driver.findElement(By.id("forward-button")).click();
     }
 
-    public static boolean adItemVerification() {
+    public static void addItemPg3() {
+        driver.findElement(By.id("forward-button")).click();
+    }
+
+    public static boolean adItemVerificationPg1() {
 
         boolean result = true;
+
+        List<WebElement> successs = driver.findElements(By.xpath("//*[@id=\"main-container\"]/h4"));
+        if (successs.size() > 0) {
+
+            System.out.println("sėkmingai sukurtas skelbimas");
+            result = true;
+        }
 
         List<WebElement> adName = driver.findElements(By.id("te"));
         List<WebElement> adDescription = driver.findElements(By.id("txte"));
@@ -159,33 +188,32 @@ public class User {
         List<WebElement> phoneNr2 = driver.findElements(By.id("ce"));
 
         if (adName.size() > 0) {
-            System.out.println("klaida:" + adName.get(0).getText());
+            System.out.println("klaida: Įveskite skelbimo pavadinimą" + adName.get(0).getText());
             result = false;
         }
         if (adDescription.size() > 0) {
-            System.out.println("klaida:" + adName.get(0).getText());
+            System.out.println("klaida:Įveskite skelbimo aprašymą" + adName.get(0).getText());
             result = false;
         }
         if (phoneNr.size() > 0) {
-            System.out.println("klaida:" + adName.get(0).getText());
+            System.out.println("klaida:Blogas tel. numeris" + adName.get(0).getText());
             result = false;
         }
         if (phoneNr2.size() > 0) {
-            System.out.println("klaida:" + adName.get(0).getText());
+            System.out.println("klaida:įveskite telefono nr" + adName.get(0).getText());
             result = false;
         }
 
-//        driver.findElement(By.id("forward-button"));
-//        driver.findElement(By.id("forward-button"));
-        List<WebElement> successs = driver.findElements(By.xpath("//*[@id=\"main-container\"]/h4"));
-        if (successs.size() > 0) {
-
-            System.out.println("sėkmingai sukurtas skelbimas");
-            result = true;
-        }
         return result;
     }
 
+    public static boolean adItemVerificationPg2() {
+        return true;
+    }
+
+    public static boolean adItemVerificationPg3() {
+        return true;
+    }
 }
 
 
