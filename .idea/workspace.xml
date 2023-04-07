@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7852fe15-51d2-4f6e-8053-bdd668391760" name="Changes" comment="ad item tests">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Photo/IMG-1735.jpg" afterDir="false" />
+    <list default="true" id="7852fe15-51d2-4f6e-8053-bdd668391760" name="Changes" comment="XML tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/runner/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/runner/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +62,7 @@
       <recent name="C:\Users\linat\IdeaProjects\E-lenta-automatedTests\src\main\resources\Photo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddItemTest.uploadPhotoTest">
+  <component name="RunManager" selected="TestNG.AddItemTest.noAdNameTest">
     <configuration name="AddItemTest.noAdNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,23 +75,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddItemTest.noCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddItemTest.noDescriptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="noCityTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddItemTest.noEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-lenta-automatedTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="noEmailTest" />
+      <option name="METHOD_NAME" value="noDescriptionTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,13 +111,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AddItemTest.wrongPhoneNrTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-lenta-automatedTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
+      <option name="METHOD_NAME" value="wrongPhoneNrTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddItemTest.uploadPhotoTest" />
-        <item itemvalue="TestNG.AddItemTest.noEmailTest" />
-        <item itemvalue="TestNG.AddItemTest.noPhoneNrTest" />
-        <item itemvalue="TestNG.AddItemTest.noCityTest" />
         <item itemvalue="TestNG.AddItemTest.noAdNameTest" />
+        <item itemvalue="TestNG.AddItemTest.noDescriptionTest" />
+        <item itemvalue="TestNG.AddItemTest.wrongPhoneNrTest" />
+        <item itemvalue="TestNG.AddItemTest.noPhoneNrTest" />
+        <item itemvalue="TestNG.AddItemTest.uploadPhotoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +144,7 @@
       <workItem from="1680693156763" duration="7355000" />
       <workItem from="1680718480695" duration="9297000" />
       <workItem from="1680760854030" duration="28628000" />
-      <workItem from="1680847196059" duration="9746000" />
+      <workItem from="1680847196059" duration="12291000" />
     </task>
     <task id="LOCAL−00001" summary="t2">
       <created>1680766015770</created>
@@ -168,7 +164,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1680816612888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="XML tests">
+      <created>1680858227624</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1680858227624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +180,7 @@
     <MESSAGE value="t2" />
     <MESSAGE value="UserLogin tests" />
     <MESSAGE value="ad item tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad item tests" />
+    <MESSAGE value="XML tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="XML tests" />
   </component>
 </project>

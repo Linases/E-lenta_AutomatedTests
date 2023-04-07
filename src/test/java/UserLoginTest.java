@@ -12,7 +12,7 @@ import java.time.Duration;
 public class UserLoginTest {
 
     @Parameters ({"userName", "password1"})
-    @Test
+    @Test (priority = 1)
     public void userSuccessfulLoginWhenEmailVerifiedTest(String userName, String password1 ) {
         assertTrue(User.userLogin(new User("Elenta_geras", "HRKtAi")));
     }

@@ -71,7 +71,7 @@ public class User {
         List<WebElement> password2Error = driver.findElements(By.xpath("//*[@id=\"main-container\"]/form/fieldset/table/tbody/tr[8]/td[2]/span"));
 
         if (!nameError.isEmpty()) {
-            System.out.println("klaida:" + nameError.get(0).getText());
+            System.out.println( nameError.get(0).getText());
             result = false;
         }
         if (!emailError.isEmpty()) {
@@ -182,25 +182,25 @@ public class User {
             result = true;
         }
 
-        List<WebElement> adName = driver.findElements(By.id("te"));
-        List<WebElement> adDescription = driver.findElements(By.id("txte"));
-        List<WebElement> phoneNr = driver.findElements(By.id("pe"));
-        List<WebElement> phoneNr2 = driver.findElements(By.id("ce"));
+        WebElement adName = driver.findElement(By.id("te"));
+        WebElement adDescription = driver.findElement(By.id("txte"));
+        WebElement phoneNr = driver.findElement(By.id("pe"));
+        WebElement phoneNr2 = driver.findElement(By.id("ce"));
 
-        if (adName.size() > 0) {
-            System.out.println("klaida: Įveskite skelbimo pavadinimą" + adName.get(0).getText());
+        if (!adName.getText().equals("")) {
+            System.out.println(adName.getText());
             result = false;
         }
-        if (adDescription.size() > 0) {
-            System.out.println("klaida:Įveskite skelbimo aprašymą" + adName.get(0).getText());
+        if (!adDescription.getText().equals("")) {
+            System.out.println(adDescription.getText());
             result = false;
         }
-        if (phoneNr.size() > 0) {
-            System.out.println("klaida:Blogas tel. numeris" + adName.get(0).getText());
+        if (!phoneNr.getText().equals("")) {
+            System.out.println(phoneNr.getText());
             result = false;
         }
-        if (phoneNr2.size() > 0) {
-            System.out.println("klaida:įveskite telefono nr" + adName.get(0).getText());
+        if (!phoneNr2.getText().equals("")) {
+            System.out.println(phoneNr2.getText());
             result = false;
         }
 
