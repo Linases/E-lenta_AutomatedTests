@@ -13,7 +13,7 @@ public class UserLoginTest {
 
     @Parameters ({"userName", "password1"})
     @Test (priority = 1)
-    public void userSuccessfulLoginWhenEmailVerifiedTest(String userName, String password1 ) {
+    public void userLogin_WhenEmailVerified_Test(String userName, String password1 ) {
         assertTrue(User.userLogin(new User("Elenta_geras", "HRKtAi")));
     }
 
@@ -29,12 +29,12 @@ public class UserLoginTest {
 
     @Test
     public void emailResendTest() {
-        assertTrue(User.userRemindPassword(new User("lina.tauraite@gmail.com")));
+        assertTrue(User.remindPassword(new User("lina.tauraite@gmail.com")));
     }
 
     @Test
     public void emailResendFailTest() {
-        assertFalse(User.userRemindPassword(new User("lina.tauraite@email.com")));
+        assertFalse(User.remindPassword(new User("lina.tauraite@email.com")));
     }
 
     @BeforeClass

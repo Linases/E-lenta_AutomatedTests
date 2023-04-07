@@ -52,10 +52,10 @@ public class User {
         driver.findElement(By.xpath("//*[@id=\"main-container\"]/form/fieldset/table/tbody/tr[11]/td[2]/input")).click();
         // driver.findElement(By.className("info"));
 
-        return userRegisterVerification();
+        return registerVerification();
     }
 
-    public static boolean userRegisterVerification() {
+    public static boolean registerVerification() {
         boolean result = true;
 
 
@@ -71,7 +71,7 @@ public class User {
         List<WebElement> password2Error = driver.findElements(By.xpath("//*[@id=\"main-container\"]/form/fieldset/table/tbody/tr[8]/td[2]/span"));
 
         if (!nameError.isEmpty()) {
-            System.out.println( nameError.get(0).getText());
+            System.out.println(nameError.get(0).getText());
             result = false;
         }
         if (!emailError.isEmpty()) {
@@ -108,7 +108,7 @@ public class User {
         return result;
     }
 
-    public static boolean userRemindPassword(User userEmail) {
+    public static boolean remindPassword(User userEmail) {
         driver.findElement(By.xpath("//*[@id=\"form\"]/fieldset/table/tbody/tr[8]/td/p/a")).click();
         driver.findElement(By.id("Email")).sendKeys(userEmail.email);
         driver.findElement(By.xpath("//*[@id=\"main-container\"]/div[2]/form/table/tbody/tr[3]/td[2]/input")).click();
@@ -140,11 +140,11 @@ public class User {
             return false;
         }
         addItemPg2();
-        if (!adItemVerificationPg2()){
-        return false;
+        if (!adItemVerificationPg2()) {
+            return false;
         }
         addItemPg3();
-        if (!adItemVerificationPg3()){
+        if (!adItemVerificationPg3()) {
             return false;
         }
         return true;
@@ -159,7 +159,7 @@ public class User {
         driver.findElement(By.id("phone")).sendKeys(adItem.phoneNr);
         driver.findElement(By.id("email")).sendKeys(adItem.email);
         driver.findElement(By.id("submit-button")).click();
-       }
+    }
 
     public static void addItemPg2() {
         String photoUpload = "C:\\Users\\linat\\IdeaProjects\\E-lenta-automatedTests\\src\\main\\resources\\Photo\\IMG-1735.jpg";
@@ -172,20 +172,17 @@ public class User {
     }
 
     public static boolean adItemVerificationPg1() {
-
         boolean result = true;
-
-        List<WebElement> successs = driver.findElements(By.xpath("//*[@id=\"main-container\"]/h4"));
-        if (successs.size() > 0) {
-
-            System.out.println("sėkmingai sukurtas skelbimas");
-            result = true;
+        List<WebElement> inputfiles = driver.findElements(By.id("inputfile"));
+        if (inputfiles.size() > 0) {
+            return true;
         }
 
         WebElement adName = driver.findElement(By.id("te"));
         WebElement adDescription = driver.findElement(By.id("txte"));
         WebElement phoneNr = driver.findElement(By.id("pe"));
         WebElement phoneNr2 = driver.findElement(By.id("ce"));
+        WebElement email = driver.findElement(By.id("ee"));
 
         if (!adName.getText().equals("")) {
             System.out.println(adName.getText());
@@ -203,7 +200,10 @@ public class User {
             System.out.println(phoneNr2.getText());
             result = false;
         }
-
+        if (!email.getText().equals("")) {
+            System.out.println(email.getText());
+            result = false;
+        }
         return result;
     }
 

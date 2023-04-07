@@ -1,10 +1,7 @@
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
@@ -13,9 +10,14 @@ import java.time.Duration;
 public class AddItemTest {
     @Parameters({"adName", "adDescription", "city", "phoneNr", "email"})
     @Test(priority = 1)
-    public void addItemPositiveTest(String adName, String adDescription, String city, String phone, String email) {
-
-        assertTrue(User.addItem(new User("Ieškau darbo", "Ieškau testuotojos darbo", "Vilnius", "861799202", "email@gmail.com")));
+    public void addItemPositiveTest(
+            @Optional("testas") String adName,
+            @Optional("testas") String adDescription,
+            @Optional("testas") String city,
+            @Optional("+37063540125") String phone,
+            @Optional("email@email.com") String email
+    ) {
+        assertTrue(User.addItem(new User(adName, adDescription, city,phone, email)));
 
     }
 
@@ -26,17 +28,27 @@ public class AddItemTest {
     }
 
     @Test
+    public void textSizeAdNameTest() {
+
+        assertFalse(User.addItem(new User("ieškau bet kokio darbo".repeat(2000), "Ieškau testuotojos darbo", "Vilnius", "861799202", "email@gmail.com")));
+    }
+
+    @Test
     public void noDescriptionTest() {
 
         assertFalse(User.addItem(new User("Ieškau darbo", "", "Vilnius", "861799202", "email@gmail.com")));
 
     }
-
     @Test
     public void noCityTest() {
 
         assertTrue(User.addItem(new User("Ieškau darbo", "Ieškau testuotojos darbo", "", "861799202", "email@gmail.com")));
 
+    }
+    @Test
+    public void cityNameSizeTest() {
+
+        assertFalse(User.addItem(new User("darbas", "Ieškau testuotojos darbo", "Madagaskaras".repeat(3000), "861799202", "email@gmail.com")));
     }
 
     @Test
@@ -48,7 +60,7 @@ public class AddItemTest {
     @Test
     public void wrongPhoneNrTest() {
 
-        assertFalse(User.addItem(new User("Ieškau", "Ieškau testuotojos darbo", "Vilnius", "64564454", "email@gmail.com")));
+        assertFalse(User.addItem(new User("Ieškau", "Ieškau testuotojos darbo", "Vilnius", "26565654", "email@gmail.com")));
     }
 
     @Test
@@ -56,7 +68,6 @@ public class AddItemTest {
 
         assertFalse(User.addItem(new User("Ieškau", "Ieškau testuotojos darbo", "Vilnius", "861799202", "")));
     }
-
     @BeforeClass
     public void beforeClass() {
         User.driver = new ChromeDriver();

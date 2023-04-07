@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +64,12 @@
       <recent name="C:\Users\linat\IdeaProjects\E-lenta-automatedTests\src\main\resources\Photo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddItemTest.noAdNameTest">
-    <configuration name="AddItemTest.noAdNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddItemTest.wrongPhoneNrTest">
+    <configuration name="AddItemTest.addItemPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="noAdNameTest" />
+      <option name="METHOD_NAME" value="addItemPositiveTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -75,11 +77,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddItemTest.noDescriptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddItemTest.citySizeAdNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="noDescriptionTest" />
+      <option name="METHOD_NAME" value="citySizeAdNameTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -87,23 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddItemTest.noPhoneNrTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddItemTest.lonAdNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-lenta-automatedTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="noPhoneNrTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddItemTest.uploadPhotoTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-lenta-automatedTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddItemTest" />
-      <option name="METHOD_NAME" value="uploadPhotoTest" />
+      <option name="METHOD_NAME" value="lonAdNameTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,13 +113,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/Users/linat/IdeaProjects/E-lenta-automatedTests/src/test/runner/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-lenta-automatedTests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/runner/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddItemTest.noAdNameTest" />
-        <item itemvalue="TestNG.AddItemTest.noDescriptionTest" />
         <item itemvalue="TestNG.AddItemTest.wrongPhoneNrTest" />
-        <item itemvalue="TestNG.AddItemTest.noPhoneNrTest" />
-        <item itemvalue="TestNG.AddItemTest.uploadPhotoTest" />
+        <item itemvalue="TestNG.AddItemTest.citySizeAdNameTest" />
+        <item itemvalue="TestNG.C:/Users/linat/IdeaProjects/E-lenta-automatedTests/src/test/runner/testng.xml" />
+        <item itemvalue="TestNG.AddItemTest.addItemPositiveTest" />
+        <item itemvalue="TestNG.AddItemTest.lonAdNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,7 @@
       <workItem from="1680693156763" duration="7355000" />
       <workItem from="1680718480695" duration="9297000" />
       <workItem from="1680760854030" duration="28628000" />
-      <workItem from="1680847196059" duration="12291000" />
+      <workItem from="1680847196059" duration="19643000" />
     </task>
     <task id="LOCAL−00001" summary="t2">
       <created>1680766015770</created>
@@ -170,7 +170,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1680858227624</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="XML tests">
+      <created>1680863861751</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1680863861751</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
